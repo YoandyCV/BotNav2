@@ -1,0 +1,17 @@
+IMAPClient==2.3.1
+multidict==6.0.4
+pyzmail36==1.0.5
+requests==2.31.0
+urllib3==2.0.2
+beautifulsoup4==4.12.2
+bs4==0.0.1
+duckduckgo_search==3.8.0
+python-telegram-bot==20.3
+openai==0.27.8
+pillow==9.5.0
+py7zr==0.20.5
+pytube==15.0.0
+Flask==2.3.2
+pyzipper==0.3.6
+gunicorn==20.1.0
+Download_Easy==0.0.2
