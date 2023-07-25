@@ -492,20 +492,20 @@ def run_DescargaYoutube(url, email):
 
 #Ejecutamos un Hilo por cada entrada de búsqueda
 def run_Buscador(string, email):
-    rb = Multihilos2(target=Buscador, args=(string,))
+    rb = Multihilos2(target=Buscador, args=(string, Semail))
     rb.start()
     rb.join()
     return rb.result
 
 #Ejecutamos un Hilo por cada entrada de búsqueda
 def run_BotIMG(string, email):
-    rbi = Multihilos2(target=Bot_GPT_Img, args=(string,))
+    rbi = Multihilos2(target=Bot_GPT_Img, args=(string, email))
     rbi.start()
     rbi.join()
     return rbi.result
 
 def run_Img(string, email):
-    rimg = Multihilos2(target=Img, args=(string,))
+    rimg = Multihilos2(target=Img, args=(string, email))
     rimg.start()
     rimg.join()
     return rimg.result
