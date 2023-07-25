@@ -363,7 +363,7 @@ def Leer_Report(string, email):
                 
 def ListaDir():
     lista =  []
-    archivos_app = ['BotNav.py', 'conexion.py', 'config.py', 'requirements.txt']   
+    archivos_app = ['BotNav.py', 'conexion.py', 'config.py', 'requirements.txt', '.venv', '.git', '__pycache__']   
     nombres_archivos = os.listdir()   
     for archivo in nombres_archivos:
         if archivo not in archivos_app:
