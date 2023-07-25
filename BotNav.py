@@ -369,7 +369,7 @@ def ListaDir():
         if archivo not in archivos_app:
             lista.append(archivo)
     print ('Archivo descargado:')
-    print (Lista)        
+    print (lista)        
     return (lista)
 
 
@@ -528,6 +528,7 @@ class Multihilos2(threading.Thread):
 
 
 def Archivos_olvidados(string, email):
+    lista = []
     lista = ListaDir()        
     texto_listado = ""
     for elemento in lista:
