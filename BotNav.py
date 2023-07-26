@@ -406,13 +406,14 @@ def DescargaArchivo():
             mail('Descargando el archivo...', 'text', email)                       
             subprocess.run(['download-easy', url])
             # Nombre de archivo descargado
-            nombre_archivo = ListaDir() 
-            Compacta(nombre_archivo[0])      
+            nombre_archivo = ListaDir()
+            os.rename(nombre_archivo[0], nombre_archivo[0]+'.dat') 
+            Compacta(nombre_archivo[0]+'.dat')      
             # Recuperamos los volúmenes creados
             archivos_creados = ListaDir()
 
             MultiEnvio(archivos_creados, email)
-            mail ('Descarga terminada!!!', 'text', email) 
+            mail ('Descarga terminada!!!\nAl extraer el archivo recuerde eliminar el .dat al final de este.', 'text', email) 
             
         except OSError as e:
             print(f'Algo paso error: {str(e)}')
@@ -541,7 +542,7 @@ def Elimina_archivos(string, email):
     archivos = string.split(", ")
     lista = ['Archivos eliminados:']
     for archivo in archivos:
-        if os.path.exists(mi_dir+'\\'+archivo):
+        if os.path.exists(archivo):
             os.remove(archivo)
             lista.append(archivo)
         
